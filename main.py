@@ -29,7 +29,7 @@ def procedure(PtoC):
         img = cv2.imread(my_file)
         obj = MainPGArea(name, img)
         name_list.append(name)
-        area_list.append(obj.pixels * PtoC)
+        area_list.append(round(obj.pixels * (PtoC ** 2), 2))  # 小数点以下2桁
 
     return name_list, area_list
 
