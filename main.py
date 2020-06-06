@@ -10,13 +10,18 @@ import csv
 
 
 def main():  # メイン関数
-    files = []
-    path = './'
-    for filename in os.listdir(path):
-        if not os.path.isfile(os.path.join(path, filename)):
-            if not filename == ".git":
-                files.append(filename)
-    print(files)
+    path = "./photo"
+    os.chdir(path)
+    procedure()
+    os.chdir("../")
+
+
+def procedure():
+    jpg_list = glob.glob("*.JPG")  # JPGの探索とループ
+    for i in range(len(jpg_list)):
+        my_file = jpg_list[i]
+        print("{0}/{1}: {2}".format(i, len(jpg_list), my_file))
+        img = cv2.imread(my_file)
 
 
 if __name__ == '__main__':
