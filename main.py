@@ -3,12 +3,15 @@ import glob
 import cv2
 import numpy as np
 import csv
+import time
 
 # _listはリスト
 # np_はnp.arrayに格納されている
 
 
 def main():  # メイン関数
+    start_time = time.time()
+
     # 変数調整はここで行う
     PtoC = 1.0 / 27.7  # pixel to cm  ImageJ等で前もって計測
     # 校正の必要あり。複数枚で確認が要必要。
@@ -22,6 +25,8 @@ def main():  # メイン関数
     name_list, area_list = procedure(PtoC, extension, size_ex)
     os.chdir("../")
     savefile(name_list, area_list)
+
+    print(">>> complete {0:.2f} sec <<<".format(time.time() - start_time))
 
 
 def procedure(PtoC, extension, size_ex):
