@@ -13,8 +13,9 @@ def main():  # メイン関数
     files = []
     path = './'
     for filename in os.listdir(path):
-        if os.path.isfile(os.path.join(path, filename)):
-            files.append(filename)
+        if not os.path.isfile(os.path.join(path, filename)):
+            if not filename == ".git":
+                files.append(filename)
     print(files)
 
 
