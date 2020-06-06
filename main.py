@@ -9,22 +9,28 @@ import csv
 
 
 def main():  # メイン関数
-    path = "./photo"
-    os.chdir(path)
+    # 変数調整はここで行う
     PtoC = 1.0 / 27.7  # pixel to cm  ImageJ等で前もって計測
     # 校正の必要あり。複数枚で確認が要必要。
-    name_list, area_list = procedure(PtoC)
+    extension = ".JPEG"  # 拡張子は調節して使う
+    size_ex = int(len(extension)) * -1
+    # binaryとcrosingの調節はMainPGArea内で直接行うこと
+
+    # 以下メインの流れ
+    path = "./photo"
+    os.chdir(path)
+    name_list, area_list = procedure(PtoC, extension, size_ex)
     os.chdir("../")
     savefile(name_list, area_list)
 
 
-def procedure(PtoC):
-    jpg_list = glob.glob("*.JPEG")  # JPGの探索とループ 拡張子は調節して使う
+def procedure(PtoC, extension, size_ex):
+    jpg_list = glob.glob("*{0}".format(extension))  # JPGの探索とループ
     name_list = []
     area_list = []
     for i in range(len(jpg_list)):
         my_file = jpg_list[i]
-        name = my_file[:-5]  # 拡張子変更の際注意
+        name = my_file[:size_ex]
         print("{0}/{1}: {2}".format(i+1, len(jpg_list), name))
         img = cv2.imread(my_file)
         obj = MainPGArea(name, img)
