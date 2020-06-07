@@ -27,7 +27,6 @@ You have to regulate and set 4 parameters below in [main.py](https://github.com/
 
 You need to know **scale transration** and **lower and upper of HSV threshold** by ImageJ or other softwares.
 
-
 ### Third Step
 Moving to *AutoArea* directory and typing below,
 ```
