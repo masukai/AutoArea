@@ -38,6 +38,7 @@ You can find calculated binary images in the **save_image** folder, please check
 
 ### Additional Step
 If you do not want to use closing process, please comment out the *closing* method of class *MainPGArea*.
+
 In the *save_image* method of class *MainPGArea*, you can select stages of calculated images.
 
 ## CAUSION
