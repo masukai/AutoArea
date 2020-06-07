@@ -13,8 +13,7 @@ If you do not install Python 3, Numpy and OpenCV2, please install them yourself.
 
 ## Usage
 ### First Step
-please set **pictures** in which you want to calculate areas in the **photo** folder.
-
+please set your pictures in which you want to calculate areas in the **photo** folder.
 I saved 2 sample pictures. If you want to calculate your data (pictures), please delete my samples.
 
 ### Second Step
@@ -42,8 +41,8 @@ If you do not want to use closing process, please comment out the *closing* meth
 In the *save_image* method of class *MainPGArea*, you can select stages of calculated images.
 
 ## CAUSION
-**An environment of taking pictures is most important.**
+* **An environment of taking pictures is the most important.**
 Please take pictures or images in the almost same environment.
 
-This program has been performed by **only** MacOS 10.15.4.
+* This program has been performed by **only** MacOS 10.15.4.
 If you find some bugs, please tell me about them.
