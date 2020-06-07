@@ -87,7 +87,7 @@ class MainPGArea:  # 色調に差があり、輪郭になる場合HSVに変換>>
         os.chdir(path)
         # cv2.imwrite("{0}_hsv.jpg".format(self.file_name), self.hsv)
         # cv2.imwrite("{0}_gauss.jpg".format(self.file_name), self.gauss)
-        cv2.imwrite("{0}_bin.jpg".format(self.file_name), self.bin)
+        # cv2.imwrite("{0}_bin.jpg".format(self.file_name), self.bin)
         cv2.imwrite("{0}_cl.jpg".format(self.file_name), self.cl)
         os.chdir("../photo")
 
