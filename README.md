@@ -9,7 +9,19 @@ This **AutoArea** can calculate something's area in each picture repeatedly by P
 ```
 git clone https://github.com/masukai/AutoArea.git
 ```
-If you do not install Python 3, Numpy and OpenCV2, please install them yourself.
+If you do not install Python 3, Numpy and OpenCV2, please install them, following below.
+
+* [Python 3](https://www.python.org/downloads/)
+* Numpy and OpenCV2
+```
+pip3 install numpy
+pip3 install opencv-python
+```
+or
+```
+pip install numpy
+pip install opencv-python
+```
 
 ## Usage
 ### First Step
@@ -19,15 +31,15 @@ I saved 2 sample pictures. If you want to calculate your data (pictures), please
 ### Second Step
 You have to regulate and set 4 parameters below in [main.py](https://github.com/masukai/AutoArea/blob/master/main.py).
 
-1. **scale transration**; from pixel to cm, in *main* function
+1. **PtoC; scale transration**: from pixel to cm, in *main* function
 2. **extension**, e.g., "png", "jpg" and "JPEG" in *main* function
-3. **lower and upper of HSV threshold**; binary transration, in *hsv_binary* method of class *MainPGArea*
+3. **lower and upper of HSV threshold**: binary transration, in *hsv_binary* method of class *MainPGArea*
 4. **kernel** of closing size in *closing* method of class *MainPGArea*
 
-You need to know **scale transration** and **lower and upper of HSV threshold** by ImageJ or other softwares.
+You need to know **PtoC; scale transration** and **lower and upper of HSV threshold** by ImageJ or other softwares.
 
 ### Third Step
-Moving to *AutoArea* directory and typing below,
+Move to *AutoArea* directory and type below,
 ```
 python3 main.py
 ```
