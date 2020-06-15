@@ -53,14 +53,23 @@ If you do not want to use closing process, please comment out the *closing* meth
 In the *save_image* method of class *MainPGArea*, you can select stages of calculated images.
 
 ## Verification
+If you want to verify the calculated values with AutoArea,
+you write the measured values in the **measured_area.csv** file.
+
+Do not comment out **verification()** in *main* function.
+
+You can visualize and check the values in the **measured_area.csv** and
+**calculated_area.csv** files by making a one-to-one correspondence
+between them, like *Verification2*.
+
 ### Verification 1
 <img src="https://user-images.githubusercontent.com/37993351/84643037-417d9500-af38-11ea-9970-eebc43c89d9a.jpg" width=40%>
 <img src="https://user-images.githubusercontent.com/37993351/84643058-48a4a300-af38-11ea-9c1d-d4712667f096.jpg" width=40%>
 
 You can see that the corners are rounded due to the closing filter.
 
-This is a 6 cm square with an area of 36 $cm^2$,
-but the ImageJ and AutoArea Both are now 35.85 cm^2.
+This is a 6 cm square with an area of 36 cm2,
+but the ImageJ and AutoArea Both are now 35.85 cm2.
 That means that only the error of the value
 when re-scaling from pixel to cm is reflected.
 
