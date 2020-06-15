@@ -53,11 +53,13 @@ If you do not want to use closing process, please comment out the *closing* meth
 In the *save_image* method of class *MainPGArea*, you can select stages of calculated images.
 
 ### Verification 1
-![sample](https://github.com/masukai/AutoArea/tree/master/photo/sample.jpg)
-![sample](https://github.com/masukai/AutoArea/tree/master/save_image/sample_cl.jpg)
+![sample](https://user-images.githubusercontent.com/37993351/84643037-417d9500-af38-11ea-9970-eebc43c89d9a.jpg "sample")
+![sample_cl](https://user-images.githubusercontent.com/37993351/84643058-48a4a300-af38-11ea-9c1d-d4712667f096.jpg "sample_cl")
 
 
 ### Verification 2
+![Verification](https://user-images.githubusercontent.com/37993351/84643155-6a058f00-af38-11ea-9e01-295343fdaef7.png "Verification")
+
 
 ## CAUSION
 * **An environment of taking pictures is the most important.**
