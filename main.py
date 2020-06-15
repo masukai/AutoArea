@@ -14,9 +14,9 @@ def main():  # メイン関数
     start_time = time.time()
 
     # 変数調整はここで行う
-    PtoC = 1.0 / 27.7  # pixel to cm  ImageJ等で前もって計測
+    PtoC = 1.0 / 28.3889  # pixel to cm  ImageJ等で前もって計測
     # 校正の必要あり。複数枚で確認が要必要。
-    extension = ".JPEG"  # 拡張子は調節して使う
+    extension = ".jpg"  # 拡張子は調節して使う
     size_ex = int(len(extension)) * -1
     # binaryとcrosingの調節はMainPGArea内で直接行うこと
 
@@ -28,7 +28,7 @@ def main():  # メイン関数
     savefile(name_list, area_list)
 
     # 計測(実測)値と計算値の比較用 基本的にコメントアウト
-    verification()
+    # verification()
 
     print(">>> complete {0:.2f} sec <<<".format(time.time() - start_time))
 
