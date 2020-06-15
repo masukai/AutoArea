@@ -59,8 +59,8 @@ In the *save_image* method of class *MainPGArea*, you can select stages of calcu
 
 You can see that the corners are rounded due to the closing filter.
 
-This is a 6 cm square with an area of 36 $$cm^{2}$$,
-but the ImageJ and AutoArea Both are now 35.85 $$cm^{2}$$.
+This is a 6 cm square with an area of 36 $$cm^2$$,
+but the ImageJ and AutoArea Both are now 35.85 cm^2.
 That means that only the error of the value
 when re-scaling from pixel to cm is reflected.
 
