@@ -52,14 +52,30 @@ If you do not want to use closing process, please comment out the *closing* meth
 
 In the *save_image* method of class *MainPGArea*, you can select stages of calculated images.
 
+## Verification
 ### Verification 1
 <img src="https://user-images.githubusercontent.com/37993351/84643037-417d9500-af38-11ea-9970-eebc43c89d9a.jpg" width=40%>
 <img src="https://user-images.githubusercontent.com/37993351/84643058-48a4a300-af38-11ea-9c1d-d4712667f096.jpg" width=40%>
 
+You can see that the corners are rounded due to the closing filter.
+
+This is a 6 cm square with an area of 36 cm^{2},
+but the ImageJ and AutoArea Both are now 35.85 cm^{2}.
+That means that only the error of the value
+when re-scaling from pixel to cm is reflected.
 
 ### Verification 2
 <img src="https://user-images.githubusercontent.com/37993351/84643155-6a058f00-af38-11ea-9e01-295343fdaef7.png" width=60%>
+90 images as measured by ImageJ (Measured) and calculated by AutoArea (Calculated).
 
+ImageJ has a few large values, but this is probably due to manual error.
+The point is that the mean values are almost identical
+for both ImageJ and AutoArea, and are close to
+the intersection of the line with y=x and
+the line fitted by the least-squares method.
+Even if the values are slightly different,
+the result shows that the same trend can be firmly established
+by manual work with ImageJ and automatic calculations with AutoArea.
 
 ## CAUSION
 * **An environment of taking pictures is the most important.**
