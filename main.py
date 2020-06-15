@@ -1,6 +1,7 @@
 import os
 import glob
 import cv2
+import matplotlib.pyplot as plt
 import numpy as np
 import csv
 import time
@@ -25,6 +26,9 @@ def main():  # メイン関数
     name_list, area_list = procedure(PtoC, extension, size_ex)
     os.chdir("../")
     savefile(name_list, area_list)
+
+    # 計測(実測)値と計算値の比較用 基本的にコメントアウト
+    verification()
 
     print(">>> complete {0:.2f} sec <<<".format(time.time() - start_time))
 
@@ -52,6 +56,40 @@ def savefile(name_list, area_list):
         writer = csv.writer(f, lineterminator="\n")
         for i in range(len(name_list)):
             writer.writerow(savecsv[i])
+
+
+def verification():
+    print("Start Verification")
+    np_mea = np.loadtxt('measured_area.csv', delimiter=',', usecols=(1))
+    np_cal = np.loadtxt('calculated_area.csv', delimiter=',', usecols=(1))
+    print("Measured: {0}".format(np_mea))
+    print("Calculated: {0}".format(np_cal))
+
+    # 可視化
+    np_check = np.array([-10000, 10000])
+
+    coef_1 = np.polyfit(np_mea, np_cal, 1)
+    print("y = ax + b")
+    print("a: {0}".format(coef_1[0]))
+    print("b: {0}".format(coef_1[1]))
+    y_pred_1 = coef_1[0] * np_check + coef_1[1]
+
+    ax = plt.figure(num=0, dpi=360).gca()
+    ax.set_title("Verification", fontsize=14)
+    ax.scatter(np_mea, np_cal, s=2, color="red", label="Verification")
+    ax.scatter(np.mean(np_mea), np.mean(np_cal), s=40, marker="*", color="purple", label="Mean Value")
+    ax.plot(np_check, y_pred_1, linewidth=1, color="red", label="fitting: y={0:.2f}x+{1:.2f}".format(coef_1[0], coef_1[1]))  # 最小2乗法 1次式
+    ax.plot(np_check, np_check, linewidth=1, color="black", label="y=x")
+    plt.grid(which='major')
+    plt.legend()
+    ax.set_xlim([0, 3000])
+    ax.set_ylim([0, 3000])
+    ax.set_xlabel('Measured', fontsize=14)
+    ax.set_ylabel('Calculated', fontsize=14)
+    ax.set_aspect('equal', adjustable='box')
+    plt.savefig("Verification.png", bbox_inches='tight', pad_inches=0.1)
+    plt.pause(0.3)  # 計算速度を上げる場合はコメントアウト
+    plt.clf()
 
 
 class MainPGArea:  # 色調に差があり、輪郭になる場合HSVに変換>>>2値化して判別
