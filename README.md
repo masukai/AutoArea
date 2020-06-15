@@ -59,14 +59,15 @@ In the *save_image* method of class *MainPGArea*, you can select stages of calcu
 
 You can see that the corners are rounded due to the closing filter.
 
-This is a 6 cm square with an area of 36 cm^{2},
-but the ImageJ and AutoArea Both are now 35.85 cm^{2}.
+This is a 6 cm square with an area of 36 $$cm^{2}$$,
+but the ImageJ and AutoArea Both are now 35.85 $$cm^{2}$$.
 That means that only the error of the value
 when re-scaling from pixel to cm is reflected.
 
 ### Verification 2
 <img src="https://user-images.githubusercontent.com/37993351/84643155-6a058f00-af38-11ea-9e01-295343fdaef7.png" width=60%>
 90 images as measured by ImageJ (Measured) and calculated by AutoArea (Calculated).
+(I do not publish 90 images.)
 
 ImageJ has a few large values, but this is probably due to manual error.
 The point is that the mean values are almost identical
