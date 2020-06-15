@@ -53,12 +53,12 @@ If you do not want to use closing process, please comment out the *closing* meth
 In the *save_image* method of class *MainPGArea*, you can select stages of calculated images.
 
 ### Verification 1
-![sample](https://user-images.githubusercontent.com/37993351/84643037-417d9500-af38-11ea-9970-eebc43c89d9a.jpg "sample")
-![sample_cl](https://user-images.githubusercontent.com/37993351/84643058-48a4a300-af38-11ea-9c1d-d4712667f096.jpg "sample_cl")
+<img src="https://user-images.githubusercontent.com/37993351/84643037-417d9500-af38-11ea-9970-eebc43c89d9a.jpg" width=40%>
+<img src="https://user-images.githubusercontent.com/37993351/84643058-48a4a300-af38-11ea-9c1d-d4712667f096.jpg" width=40%>
 
 
 ### Verification 2
-![Verification](https://user-images.githubusercontent.com/37993351/84643155-6a058f00-af38-11ea-9e01-295343fdaef7.png "Verification")
+<img src="https://user-images.githubusercontent.com/37993351/84643155-6a058f00-af38-11ea-9e01-295343fdaef7.png" width=60%>
 
 
 ## CAUSION
