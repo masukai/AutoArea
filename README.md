@@ -58,6 +58,15 @@ you write the measured values in the **measured_area.csv** file.
 
 Do not comment out **verification()** in *main* function.
 
+Forthermore, you need to install Matplotlib (3.1.1) like below.
+```
+pip3 install matplotlib
+```
+or
+```
+pip install matplotlib
+```
+
 You can visualize and check the values in the **measured_area.csv** and
 **calculated_area.csv** files by making a one-to-one correspondence
 between them, like *Verification2*.
