@@ -50,7 +50,8 @@ You need to know **PtoC; scale transration** and **lower and upper of HSV thresh
 
 It is NOW possible to specify the number of cores of your computer to be used (2021.05.21).
 
-(line.53) **Pool(multi.cpu_count())** in function I have already set the maximum number of cores on your computer to use.
+(line.53) **Pool(multi.cpu_count())** in _procedure_ function:
+I have already set the maximum number of cores on your computer to use.
 If you want to lower the number of cores, change **multi.cpu_count()** to the number of cores you want to use.
 For example, if you want to use 4 cores, change **4** from **multi.cpu_count()**.
 
