@@ -1,6 +1,7 @@
 # AutoArea
 
 This **AutoArea** can calculate something's area in each picture repeatedly by Python 3 (3.8.6) instead of [ImageJ](https://imagej.nih.gov/ij/).
+
 (2021.05.21: Python version was updated.)
 
 ## Dependencies
@@ -48,6 +49,7 @@ You have to regulate and set 5 parameters below in [main.py](https://github.com/
 You need to know **PtoC; scale transration** and **lower and upper of HSV threshold** by ImageJ or other softwares.
 
 It is NOW possible to specify the number of cores of your computer to be used (2021.05.21).
+
 (line.53) **Pool(multi.cpu_count())** in function I have already set the maximum number of cores on your computer to use.
 If you want to lower the number of cores, change **multi.cpu_count()** to the number of cores you want to use.
 For example, if you want to use 4 cores, change **4** from **multi.cpu_count()**.
@@ -119,5 +121,5 @@ by manual work with ImageJ and automatic calculations with AutoArea.
 - **An environment of taking pictures is the most important.**
   Please take pictures or images in the almost same environment.
 
-- This program has been performed by **only** MacOS 10.15.4.
+- This program has been checked by MacOS 11.3.1 (2021.05.21).
   If you find some bugs, please tell me about them.
