@@ -34,6 +34,7 @@ def main():  # メイン関数
     # verification(folder_name)
 
     print(">>> complete {0:.2f} sec <<<".format(time.time() - start_time))
+    return
 
 
 def Multiprocessing(data):
@@ -70,6 +71,7 @@ def savefile(folder_name, name_list, area_list):
         writer = csv.writer(f, lineterminator="\n")
         for i in range(len(name_list)):
             writer.writerow(savecsv[i])
+    return
 
 
 def verification(folder_name):
@@ -107,6 +109,7 @@ def verification(folder_name):
     plt.savefig("Verification.png", bbox_inches='tight', pad_inches=0.1)
     plt.pause(0.3)  # 計算速度を上げる場合はコメントアウト
     plt.clf()
+    return
 
 
 class MainPGArea:  # 色調に差があり、輪郭になる場合HSVに変換>>>2値化して判別
@@ -124,18 +127,22 @@ class MainPGArea:  # 色調に差があり、輪郭になる場合HSVに変換>>
 
     def hsv_transration(self):  # 色調変換
         self.hsv = cv2.cvtColor(self.img, cv2.COLOR_BGR2HSV)
+        return
 
     def gauss_transration(self):  # ガウス変換
         self.gauss = cv2.GaussianBlur(self.hsv, (15, 15), 3)  # フィルタの大きさ
+        return
 
     def hsv_binary(self):  # HSV制限2値化
         lower = np.array([22, 90, 90])  # 下限 0 0 0
         upper = np.array([76, 255, 255])  # 上限 180 255 255
         self.bin = cv2.inRange(self.gauss, lower, upper)
+        return
 
     def closing(self):  # 膨張収縮処理により穴埋め
         kernel = np.ones((19, 19), np.uint8)
         self.cl = cv2.morphologyEx(self.bin, cv2.MORPH_CLOSE, kernel)
+        return
 
     def save_image(self):  # 画像の保存
         path = "../{0}_save_image".format(self.folder_name)
@@ -146,9 +153,11 @@ class MainPGArea:  # 色調に差があり、輪郭になる場合HSVに変換>>
         # cv2.imwrite("{0}_bin.jpg".format(self.file_name), self.bin)
         cv2.imwrite("{0}_cl.jpg".format(self.file_name), self.cl)
         os.chdir("../{0}".format(self.folder_name))
+        return
 
     def calculation_area(self):  # 面積pixel分の計算
         self.pixels = cv2.countNonZero(self.cl)  # 計算する画像の名前に変更
+        return
 
 
 if __name__ == '__main__':
