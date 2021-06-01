@@ -40,11 +40,11 @@ I saved 2 sample pictures. If you want to calculate your data (pictures), please
 
 You have to regulate and set 5 parameters below in [main.py](https://github.com/masukai/AutoArea/blob/master/main.py).
 
-1. (line.19) **PtoC; scale transration** in _main_ function: change the unit from pixel to cm.
-2. (line.21) **extension** in _main_ function: select your using extension; "png", "jpg" and "JPEG".
-3. (line.26) **folder_name** in _main_ function: give the name you want to give it.
-4. (line.132-133) **lower and upper of HSV threshold** in _hsv_binary_ method of class _MainPGArea_: binary transration
-5. (line.137) **kernel** in _closing_ method of class _MainPGArea_: choose a closing size that suits your purpose.
+1. (line.21) **PtoC; scale transration** in _main_ function: change the unit from pixel to cm.
+2. (line.23) **extension** in _main_ function: select your using extension; "png", "jpg" and "JPEG".
+3. (line.28) **folder_name** in _main_ function: give the name you want to give it.
+4. (line.139-140) **lower and upper of HSV threshold** in _hsv_binary_ method of class _MainPGArea_: binary transration
+5. (line.145) **kernel** in _closing_ method of class _MainPGArea_: choose a closing size that suits your purpose.
 
 You need to know **PtoC; scale transration** and **lower and upper of HSV threshold** by ImageJ or other softwares.
 
