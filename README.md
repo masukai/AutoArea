@@ -3,6 +3,7 @@
 This **AutoArea** can calculate something's area in each picture repeatedly by Python 3 (3.8.6) instead of [ImageJ](https://imagej.nih.gov/ij/).
 
 (2021.05.21: Python version was updated.)
+
 2021.12.14: On Windows OS, I have received a report that the first line "#! /usr/bin/env python" in all python files can sometimes cause problems. Please remove it and try to run the file.
 
 ## Dependencies
@@ -58,7 +59,7 @@ For example, if you want to use 4 cores, change **4** from **multi.cpu_count()**
 
 ### Third Step
 
-<font color="Red">Move to _AutoArea_ directory </font> and type below,
+Move to _AutoArea_ directory and type below,
 
 ```
 python(3) main.py
