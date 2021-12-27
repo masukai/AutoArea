@@ -22,7 +22,7 @@ def main():  # メイン関数
     # 校正の必要あり。複数枚で確認が要必要。
     extension = ".jpg"  # 拡張子は調節して使う
     size_ex = int(len(extension)) * -1
-    # binaryとcrosingの調節はMainPGArea内で直接行うこと
+    # binaryとclosingの調節はMainPGArea内で直接行うこと
 
     # 以下メインの流れ
     folder_name = "photo"
